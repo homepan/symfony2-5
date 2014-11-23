@@ -1,0 +1,10 @@
+addy_user:
+    resource: "@AddyUserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+addy_page:
+    resource: "@AddyPageBundle/Controller/"
+    type:     annotation
+    prefix:   /
+

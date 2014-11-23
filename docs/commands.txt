@@ -1,0 +1,36 @@
+// Get composer
+$ curl -s https://getcomposer.org/installer | php
+
+// Get latest Symfony
+$ php composer.phar create-project symfony/framework-standard-edition c:/htdocs/symfony2-5
+
+$ php composer.phar composer create-project symfony/framework-standard-edition path/ "2.3.*"
+
+// Install vendors 
+//Composer
+$ php composer.phar install
+$ php composer.phar update
+
+$ php app/console generate:bundle --namespace=Acme/StoreBundle
+
+// Create database
+$ php app/console doctrine:database:drop --force
+$ php app/console doctrine:database:create
+
+// Create Entity
+$ php app/console doctrine:generate:entity
+// Create Entity with fields
+$ php app/console doctrine:generate:entity --entity="AcmeStoreBundle:Category" --fields="name:string(255)"
+
+//Generating Getters and Setters
+$ php app/console doctrine:generate:entities Acme/StoreBundle/Entity/Product
+
+// Creating the Database Tables/Schema
+$ php app/console doctrine:schema:update --force
+
+$ php app/console cache:clear --env=prod
+$ php app/console cache:clear --env=dev
+
+
+
+
